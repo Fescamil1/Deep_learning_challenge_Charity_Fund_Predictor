@@ -1,24 +1,9 @@
 # Deep_learning_challenge_Charity_Fund_Predictor
 Deep Learning Homework: Charity Funding Predictor : will the Alphabet Soup–funded organization be successful?
 
-## Instructions
-
 ### Step 1: Preprocess the data
 
-Use Pandas and the Scikit-Learn’s `StandardScaler()`, to preprocess the dataset in order to compile, train, and evaluate the neural network model later in Step 2
-
-Instructions to complete the preprocessing steps.
-
-1. Read in the charity_data.csv to a Pandas DataFrame, and identify the following in the dataset:
-
-- What variable(s) are considered the target(s) for the model?
-- What variable(s) are considered the feature(s) for the model?
-
-1. Drop the `EIN` and `NAME` columns.
-2. Determine the number of unique values for each column.
-3. For those columns that have more than 10 unique values, determine the number of data points for each unique value.
-4. Use the number of data points for each unique value to pick a cutoff point to bin "rare" categorical variables together in a new value, `Other`, and then check if the binning was successful.
-5. Use `pd.get_dummies()` to encode categorical variables
+The target variable for the model will be "IS_SUCCESSFUL". This column has values of 1 and 0 which helps us determine if the charity fund is successful (1) or not successful(0).  After columns "EIN" and "Name" are dropped, the remaining columns are features for the model. 
 
 ### Step 2: Compile, Train, and Evaluate the Model
 

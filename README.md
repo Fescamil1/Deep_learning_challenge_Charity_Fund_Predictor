@@ -1,64 +1,32 @@
 # Deep_learning_challenge_Charity_Fund_Predictor
-Deep Learning Homework: Charity Funding Predictor : will the Alphabet Soup–funded organization be successful?
+Deep Learning Homework: Charity Funding Predictor purpose/goal is to predict if the Alphabet Soup–funded organization will be successful.
 
-### Step 1: Preprocess the data
+### Preprocess the data
 
 The target variable for the model will be "IS_SUCCESSFUL". This column has values of 1 and 0 which helps us determine if the charity fund is successful (1) or not successful(0).  After columns "EIN" and "Name" are dropped, the remaining columns are features for the model. 
 
-### Step 2: Compile, Train, and Evaluate the Model
+### Compile, Train, and Evaluate the Model
 
-Use TensorFlow to design a neural network, or deep learning model, to create a binary classification model that can predict if the organization will be successful based on the features in the dataset. Think about how many inputs there are before determining the number of neurons and layers in the model. Compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy.
+Use TensorFlow to design a neural network, or deep learning model, to create a binary classification model that can predict if the organization will be successful based on the features in the dataset. Compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy.
 
-1. Continue using the jupter notebook where you’ve already performed the preprocessing steps from Step 1.
-2. Create a neural network model by assigning the number of input features and nodes for each layer using Tensorflow Keras.
-3. Create the first hidden layer and choose an appropriate activation function.
-4. If necessary, add a second hidden layer with an appropriate activation function.
-5. Create an output layer with an appropriate activation function.
-6. Check the structure of the model.
-7. Compile and train the model.
-8. Create a callback that saves the model's weights every 5 epochs.
-9. Evaluate the model using the test data to determine the loss and accuracy.
-10. Save and export your results to an HDF5 file, and name it `AlphabetSoupCharity.h5`.
+**Run 1** : Use neural network model with 2 hidden layers. 1st layer with 80 nodes and second layer with 30. Using 100 epochs. 
 
-### Step 3: Optimize the Model
+​	This model resulted in a Loss: 0.5574843883514404 and Accuracy of 0.7316617965698242. Although this is below the desired target of .75 it is close. 
 
-Using your knowledge of TensorFlow, optimize your model in order to achieve a target predictive accuracy higher than 75%. If you can't achieve an accuracy higher than 75%, you'll need to make at least three attempts to do so.
+**Run 2:**  Use neural network model with 3 hidden layers. 1st layer with 60 nodes, second layer with 40 and third layer with 20. Using 100 epochs. 
 
-Optimize your model in order to achieve a target predictive accuracy higher than 75% by using any or all of the following:
+​	This model resulted in a Loss: 0.5652271509170532 and of Accuracy: 0.7327113747596741. Did not find any have any significant improvement in accuracy. Even noticed a slight increase in loss. 
 
-- Adjusting the input data to ensure that there are no variables or outliers that are causing confusion in the model, such as:
-  - Dropping more or fewer columns.
-  - Creating more bins for rare occurrences in columns.
-  - Increasing or decreasing the number of values for each bin.
-- Adding more neurons to a hidden layer.
-- Adding more hidden layers.
-- Using different activation functions for the hidden layers.
-- Adding or reducing the number of epochs to the training regimen.
+**Run 3:** Use neural network model with 4 hidden layers distributed in the following way 80, 50, 30, and 5. Using 100 epochs.  Total parameters increased dramatically from the prior runs. 
 
-**NOTE**: You will not lose points if your model does not achieve target performance, as long as you make three attempts at optimizing the model in your jupyter notebook.
+​	This model resulted in Loss of 0.5677768588066101 and Accuracy dropped to  0.7274635434150696. Adding more hidden layers did not result in improved accuracy. Will attempt to redo Run#2 with increased epochs. 
 
-1. Create a new Jupyter Notebook file and name it `AlphabetSoupCharity_Optimzation.ipynb`.
-2. Import your dependencies, and read in the `charity_data.csv` to a Pandas DataFrame.
-3. Preprocess the dataset like you did in Step 1, taking into account any modifications to optimize the model.
-4. Design a neural network model, taking into account any modifications that will optimize the model to achieve higher than 75% accuracy.
-5. Save and export your results to an HDF5 file, and name it `AlphabetSoupCharity_Optimization.h5`.
+**Run 4:** Use neural network model with 3 hidden layers. 1st layer with 60 nodes, second layer with 40 and third layer with 20. Using 200 epochs.
 
-### Step 4: Write a Report on the Neural Network Model
+​	This model resulted in a of Loss: 0.5851432681083679 and Accuracy of 0.7336443066596985. This model resulted in the highest accuracy. However, it did not achieve the desired accuracy of 75%. 
 
-For this part of the Challenge, you’ll write a report on the performance of the deep learning model you created for AlphabetSoup.
+All saved in HDF5 file named AlphabetSoupCharity.h5
 
-The report should contain the following:
 
-1. **Overview** of the analysis: Explain the purpose of this analysis.
-2. **Results**: Using bulleted lists and images to support your answers, address the following questions.
 
-- Data Preprocessing
-  - What variable(s) are considered the target(s) for your model?
-  - What variable(s) are considered to be the features for your model?
-  - What variable(s) are neither targets nor features, and should be removed from the input data?
-- Compiling, Training, and Evaluating the Model
-  - How many neurons, layers, and activation functions did you select for your neural network model, and why?
-  - Were you able to achieve the target model performance?
-  - What steps did you take to try and increase model performance?
-
-1. **Summary**: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+ **Summary:**  Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.

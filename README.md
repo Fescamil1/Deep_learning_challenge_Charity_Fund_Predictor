@@ -19,7 +19,7 @@ Use TensorFlow to design a neural network, or deep learning model, to create a b
 
 **Run 3:** Use neural network model with 4 hidden layers distributed in the following way 80, 50, 30, and 5. Using 100 epochs.  Total parameters increased dramatically from the prior runs. 
 
-​	This model resulted in Loss of 0.5677768588066101 and Accuracy dropped to  0.7274635434150696. Adding more hidden layers did not result in improved accuracy. Will attempt to redo Run#2 with increased epochs. 
+​	This model resulted in Loss of 0.5677768588066101 and Accuracy dropped to  0.7274635434150696. Will attempt to redo Run#2 with increased epochs. 
 
 **Run 4:** Use neural network model with 3 hidden layers. 1st layer with 60 nodes, second layer with 40 and third layer with 20. Using 200 epochs.
 
@@ -29,4 +29,6 @@ All saved in HDF5 file named AlphabetSoupCharity.h5
 
 
 
- **Summary:**  Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+ **Summary:**   
+
+The results of each of the model attempts did not improve the accuracy enough to reach the desired accuracy rate of 75%. Adding more hidden layers did not result in improved accuracy. In fact, the model with 4 layers resulted in a decreased accuracy. In order to improve the model, it would be recommended to  check for and remove outliers.  Also, would recommend looking at changing the number of features. 
